@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  height: 65px;
+  background-color: rgb(52, 21, 52);
+  color: white;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 8vw;
+  border: 2px solid black;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+.box:hover {
+  background-color: rgb(212, 152, 212);
+}
+
+.game-info {
+  margin-top: 31px;
+  font-size: 23px;
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  align-self: start;
+}
+
+.info {
+  font-size: 30px;
+  margin: 30px 0px;
+  padding: 6px 11px;
+}
+
+.reset {
+  margin: 0px 23px;
+  padding: 11px 24px;
+  background-color: #2e2b2e;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+.imgbox img {
+  width: 0px;
+  transition: width 1s ease-in-out;
+}
+.winner {
+  text-decoration: line-through;
+  color: red; /* Optional: Change color to indicate a win */
+}
+
+
+
+@media (max-width: 1200px) {
+  .game-container {
+    display: flex;
+    align-items: center;
+    max-width: 60vw;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 60vh;
+  }
+
+  .game-info {
+    margin-top: 31px;
+    font-size: 23px;
+  }
+
+  .gamer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+
+  .reset {
+    margin: 0px 23px;
+    padding: 6px 14px;
+    background-color: #e5c7e4;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
